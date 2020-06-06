@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ColorBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ColorBox.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ColorBox.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Palette.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Palette.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Palette.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,6 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Sass File" />
       </list>
     </option>
   </component>
@@ -27,11 +36,12 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -78,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591225961805</updated>
       <workItem from="1591225970546" duration="1984000" />
-      <workItem from="1591394247332" duration="2893000" />
+      <workItem from="1591394247332" duration="3395000" />
     </task>
     <servers />
   </component>
@@ -97,5 +107,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

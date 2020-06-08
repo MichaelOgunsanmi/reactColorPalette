@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Navbar.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Navbar.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palette.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palette.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.css.map" afterDir="false" />
@@ -18,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Sass File" />
         <option value="JavaScript File" />
+        <option value="Sass File" />
       </list>
     </option>
   </component>
@@ -88,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591225961805</updated>
       <workItem from="1591225970546" duration="1984000" />
-      <workItem from="1591394247332" duration="17483000" />
+      <workItem from="1591394247332" duration="19112000" />
     </task>
     <servers />
   </component>

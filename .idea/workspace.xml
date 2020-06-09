@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Navbar.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Navbar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12033561a568b8320759b9c402e87588945df229" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Palette.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Palette.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Palette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Palette.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +39,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -92,7 +86,8 @@
       <option name="presentableId" value="Default" />
       <updated>1591225961805</updated>
       <workItem from="1591225970546" duration="1984000" />
-      <workItem from="1591394247332" duration="19112000" />
+      <workItem from="1591394247332" duration="21034000" />
+      <workItem from="1591741764823" duration="253000" />
     </task>
     <servers />
   </component>

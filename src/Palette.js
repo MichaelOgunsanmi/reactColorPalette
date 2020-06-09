@@ -9,15 +9,18 @@ import Navbar from "./Navbar";
 
 const Palette = (props) => {
     const [level, setLevel] = useState(500);
+    const [format, setFormat] = useState("hex");
     const {colors} = props.palette;
 
-    const changeLevel = (newLevel) => {setLevel(newLevel)};
+    const changeLevel = newLevel => {setLevel(newLevel)};
 
-    const colorBoxes = colors[level].map( color => <ColorBox backgroundColor={color.hex} name={color.name}/>);
+    const changeColorFormat = selectedFormat => {setFormat(selectedFormat)};
+
+    const colorBoxes = colors[level].map( color => <ColorBox backgroundColor={color[format]} name={color.name}/>);
 
     return (
         <div className={'Palette'}>
-            <Navbar level={level} changeLevel={changeLevel}/>
+            <Navbar level={level} changeLevel={changeLevel} changeColorFormat={changeColorFormat} />
             {/*Navbar Here*/}
             <div className="Palette-colors">{colorBoxes}</div>
             {/*Footer eventually*/}

@@ -32,7 +32,7 @@ const generatePalette = (inputPalette) => {
                 id: color.name.toLowerCase().replace(/ /g, "-"),
                 hex: hexColor,
                 rgb: chroma(hexColor).css(),
-                rgba: chroma(hexColor).css().replace("rgba", "rgba").replace(")", ",1.0)")
+                rgba: chroma(hexColor).css().replace("rgb", "rgba").replace(")", ",1.0)")
             })
         });
     }

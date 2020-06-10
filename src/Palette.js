@@ -10,13 +10,18 @@ import Navbar from "./Navbar";
 const Palette = (props) => {
     const [level, setLevel] = useState(500);
     const [format, setFormat] = useState("hex");
-    const {colors, paletteName, emoji} = props.palette;
+    const {colors, paletteName, emoji, id} = props.palette;
 
     const changeLevel = newLevel => {setLevel(newLevel)};
 
     const changeColorFormat = selectedFormat => {setFormat(selectedFormat)};
 
-    const colorBoxes = colors[level].map( color => <ColorBox backgroundColor={color[format]} name={color.name} key={color.id}/>);
+    const colorBoxes = colors[level].map( color => <ColorBox
+        backgroundColor={color[format]}
+        name={color.name}
+        key={color.id}
+        moreURL={`/palette/${id}/${color.id}`}
+    />);
 
     return (
         <div className={'Palette'}>

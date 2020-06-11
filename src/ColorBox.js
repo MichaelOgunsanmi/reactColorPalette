@@ -18,7 +18,7 @@ class ColorBox extends Component {
     };
 
     render () {
-        const {backgroundColor, name, moreURL} = this.props;
+        const {backgroundColor, name, moreURL, showLink} = this.props;
         const {copied} = this.state;
 
         return (
@@ -35,9 +35,11 @@ class ColorBox extends Component {
                         </div>
                         <button className="copy-button">Copy</button>
                     </div>
+                    {showLink &&
                     <Link to={moreURL} onClick={event => event.stopPropagation()}>
                         <span className="see-more">More</span>
                     </Link>
+                    }
                 </div>
             </CopyToClipboard>
         );

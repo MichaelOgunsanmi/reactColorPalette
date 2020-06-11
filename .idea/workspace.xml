@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorBox.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorBox.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Palette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleColorPalette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleColorPalette.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorBox.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorBox.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +89,7 @@
       <updated>1591225961805</updated>
       <workItem from="1591225970546" duration="1984000" />
       <workItem from="1591394247332" duration="21034000" />
-      <workItem from="1591741764823" duration="28549000" />
+      <workItem from="1591741764823" duration="29774000" />
     </task>
     <servers />
   </component>

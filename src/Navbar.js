@@ -34,6 +34,7 @@ const Navbar = (props) => {
             <div className="logo">
                 <Link to={'/'}>reactcolorpalette</Link>
             </div>
+            {props.showSlider &&
             <div className="slider-container">
                 <span>Level: {props.level}</span>
                 <div className="slider">
@@ -45,7 +46,7 @@ const Navbar = (props) => {
                         onAfterChange={props.changeLevel}
                     />
                 </div>
-            </div>
+            </div>}
             <div className="select-container">
                 <Select value={format} onChange={handleFormatChange}>
                     <MenuItem value="hex">HEX </MenuItem>

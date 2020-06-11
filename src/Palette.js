@@ -5,6 +5,7 @@ import ColorBox from "./ColorBox";
 
 import "./Palette.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 
 const Palette = (props) => {
@@ -26,12 +27,9 @@ const Palette = (props) => {
 
     return (
         <div className={'Palette'}>
-            <Navbar level={level} changeLevel={changeLevel} changeColorFormat={changeColorFormat} />
+            <Navbar level={level} changeLevel={changeLevel} changeColorFormat={changeColorFormat} showSlider/>
             <div className="Palette-colors">{colorBoxes}</div>
-            <footer className={'Palette-footer'}>
-                {paletteName}
-                <span className={'emoji'}>{emoji}</span>
-            </footer>
+            <Footer paletteName={paletteName} emoji={emoji}/>
         </div>
     );
 };

@@ -4,7 +4,7 @@ import {Redirect, Route, Switch} from "react-router-dom";
 
 import Palette from "./Palette";
 import PaletteList from "./PaletteList";
-import SingleColorBox from "./SingleColorBox";
+import SingleColorPalette from "./SingleColorPalette";
 
 import seedPalettes from "./utils/seedPalettes";
 import {generatePalette} from "./utils/colorHelpers";
@@ -26,7 +26,7 @@ const getPalette = (paletteId, colorId) => {
 
     palette = {...palette, colors: shades};
 
-    return <SingleColorBox palette={palette}/>
+    return <SingleColorPalette palette={palette}/>
 };
 
 const getShades = (paletteColors, colorId) => {

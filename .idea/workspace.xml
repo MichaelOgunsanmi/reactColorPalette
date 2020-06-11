@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SingleColorPalette.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleColorBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleColorBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Palette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SingleColorBox.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +91,7 @@
       <updated>1591225961805</updated>
       <workItem from="1591225970546" duration="1984000" />
       <workItem from="1591394247332" duration="21034000" />
-      <workItem from="1591741764823" duration="21119000" />
+      <workItem from="1591741764823" duration="22753000" />
     </task>
     <servers />
   </component>

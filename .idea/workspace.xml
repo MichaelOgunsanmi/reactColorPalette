@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/styles/ColorBoxStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/FooterStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/MiniPaletteStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/PaletteListStyles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/PaletteStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MiniPalette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MiniPalette.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Palette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Palette.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleColorPalette.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleColorPalette.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaletteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaletteList.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +51,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Colt React\Projects\reactColorPalette\src\styles" />
       <recent name="C:\Users\MICHAEL OGUNSANMI\Desktop\AI &amp; CS\Studying Source Codes\Colt React\Projects\reactColorPalette\src\utils" />
     </key>
   </component>
@@ -87,7 +96,7 @@
       <updated>1591225961805</updated>
       <workItem from="1591225970546" duration="1984000" />
       <workItem from="1591394247332" duration="21034000" />
-      <workItem from="1591741764823" duration="32338000" />
+      <workItem from="1591741764823" duration="33697000" />
     </task>
     <servers />
   </component>

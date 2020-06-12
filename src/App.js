@@ -5,9 +5,11 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import Palette from "./Palette";
 import PaletteList from "./PaletteList";
 import SingleColorPalette from "./SingleColorPalette";
+import NewPaletteForm from "./NewPaletteForm";
 
 import seedPalettes from "./utils/seedPalettes";
 import {generatePalette} from "./utils/colorHelpers";
+
 
 
 
@@ -42,6 +44,7 @@ const getShades = (paletteColors, colorId) => {
 function App() {
     return (
       <Switch>
+          <Route exact path={'/palette/new'} render={() => <NewPaletteForm/>}/>
           <Route exact path={'/'} render={(routeProps) => <PaletteList palettes={seedPalettes} {...routeProps}/>}/>
           <Route exact path={'/palette/:paletteId'} render={(routeProps) => getPalette(routeProps.match.params.paletteId)}/>
           <Route exact path={'/palette/:paletteId/:colorId'} render={(routeProps) => getPalette(routeProps.match.params.paletteId, routeProps.match.params.colorId)}/>

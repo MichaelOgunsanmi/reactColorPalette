@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-import chroma from "chroma-js";
-
 import {Link} from "react-router-dom";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import {withStyles} from "@material-ui/styles";
@@ -23,8 +21,7 @@ class ColorBox extends Component {
     render () {
         const {backgroundColor, name, moreURL, showingFullPalette, classes} = this.props;
         const {copied} = this.state;
-        const isDarkColor = chroma(backgroundColor).luminance() <= 0.08;
-        const isLightColor = chroma(backgroundColor).luminance() >= 0.7;
+
 
         return (
             <CopyToClipboard text={backgroundColor} onCopy={this.changeCopyState}>

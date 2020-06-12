@@ -7,16 +7,16 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
+import {withStyles} from "@material-ui/styles";
 
 import "rc-slider/assets/index.css"
-import "./Navbar.css";
-
-
+import styles from "./styles/NavabrStyles";
 
 
 const Navbar = (props) => {
     const [format, setFormat] = useState("hex");
     const [openSnackbar, setOpenSnackbar] = useState(false);
+    const {classes} = props;
 
 
     const handleFormatChange = (event) => {
@@ -30,14 +30,14 @@ const Navbar = (props) => {
 
 
     return (
-        <header className="Navbar">
-            <div className="logo">
+        <header className={classes.Navbar}>
+            <div className={classes.logo}>
                 <Link to={'/'}>reactcolorpalette</Link>
             </div>
             {props.showSlider &&
-            <div className="slider-container">
+            <div>
                 <span>Level: {props.level}</span>
-                <div className="slider">
+                <div className={classes.slider}>
                     <Slider
                         defaultValue={props.level}
                         min={100}
@@ -47,7 +47,7 @@ const Navbar = (props) => {
                     />
                 </div>
             </div>}
-            <div className="select-container">
+            <div className={classes.selectContainer}>
                 <Select value={format} onChange={handleFormatChange}>
                     <MenuItem value="hex">HEX </MenuItem>
                     <MenuItem value="rgb">RGB </MenuItem>
@@ -77,4 +77,4 @@ const Navbar = (props) => {
     );
 };
 
-export default Navbar;
+export default withStyles(styles)(Navbar);

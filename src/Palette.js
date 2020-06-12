@@ -6,7 +6,6 @@ import ColorBox from "./ColorBox";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-import "./Palette.css";
 import styles from "./styles/PaletteStyles";
 
 const Palette = (props) => {

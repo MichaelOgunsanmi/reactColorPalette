@@ -13,8 +13,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import {ChromePicker} from 'react-color';
-import DraggableColorBox from "./DraggableColorBox";
 import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import DraggableColorList from "./DraggableColorList";
+import {arrayMove} from "react-sortable-hoc";
 
 const drawerWidth = 400;
 
@@ -129,6 +130,13 @@ const NewPaletteForm = (props) => {
         setPaletteName(event.target.value);
     };
 
+    const handleDragAndDrop = (colorBoxPositions) => {
+        const {oldIndex, newIndex} = colorBoxPositions;
+
+        const newPaletteColors = arrayMove(paletteColors, oldIndex, newIndex);
+
+        setPaletteColors(newPaletteColors)
+    };
 
     const handleSavePalette = () => {
 
@@ -142,6 +150,8 @@ const NewPaletteForm = (props) => {
 
         props.history.push('/');
     };
+
+
 
     return (
         <div className={classes.root}>
@@ -228,12 +238,12 @@ const NewPaletteForm = (props) => {
                 })}
             >
                 <div className={classes.drawerHeader} />
-                {paletteColors.map(color => <DraggableColorBox
-                    key={color.name}
-                    color={color.color}
-                    name={color.name}
-                    handleClick={() => handleRemoveColorBox(color.name)}
-                />)}
+                <DraggableColorList
+                    paletteColors={paletteColors}
+                    handleRemoveColorBox={handleRemoveColorBox}
+                    axis={'xy'}
+                    onSortEnd={handleDragAndDrop}
+                />
             </main>
         </div>
     );

@@ -51,11 +51,14 @@ function App() {
         setPalettes([...palettes, newPalette]);
     };
 
+
     return (
       <Switch>
           <Route exact path={'/palette/new'} render={(routeProps) => <NewPaletteForm
                   savePalette={savePalette}
                   paletteNames={palettes.map(palette => palette.paletteName)}
+                  starterColors={palettes[0].colors}
+                  allColors={palettes.map(palette => palette.colors).flat()}
                   {...routeProps}
               />}
           />

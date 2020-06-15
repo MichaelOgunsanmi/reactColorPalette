@@ -117,6 +117,10 @@ const NewPaletteForm = (props) => {
         setColorName("");
     };
 
+    const handleRemoveColorBox = (colorName) => {
+        setPaletteColors(paletteColors.filter(paletteColor => paletteColor.name !== colorName))
+    };
+
     const handleColorNameChange = (event) => {
         setColorName(event.target.value);
     };
@@ -224,7 +228,12 @@ const NewPaletteForm = (props) => {
                 })}
             >
                 <div className={classes.drawerHeader} />
-                {paletteColors.map(color => <DraggableColorBox color={color.color} name={color.name}/>)}
+                {paletteColors.map(color => <DraggableColorBox
+                    key={color.name}
+                    color={color.color}
+                    name={color.name}
+                    handleClick={() => handleRemoveColorBox(color.name)}
+                />)}
             </main>
         </div>
     );

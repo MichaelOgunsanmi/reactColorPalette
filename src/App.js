@@ -53,10 +53,17 @@ function App() {
 
     return (
       <Switch>
-          <Route exact path={'/palette/new'} render={(routeProps) => <NewPaletteForm savePalette={savePalette} {...routeProps}/>}/>
+          <Route exact path={'/palette/new'} render={(routeProps) => <NewPaletteForm
+                  savePalette={savePalette}
+                  paletteNames={palettes.map(palette => palette.paletteName)}
+                  {...routeProps}
+              />}
+          />
           <Route exact path={'/'} render={(routeProps) => <PaletteList palettes={palettes} {...routeProps}/>}/>
           <Route exact path={'/palette/:paletteId'} render={(routeProps) => getPalette(routeProps.match.params.paletteId)}/>
-          <Route exact path={'/palette/:paletteId/:colorId'} render={(routeProps) => getPalette(routeProps.match.params.paletteId, routeProps.match.params.colorId)}/>
+          <Route exact path={'/palette/:paletteId/:colorId'} render={(routeProps) =>
+              getPalette(routeProps.match.params.paletteId, routeProps.match.params.colorId)}
+          />
       </Switch>
     );
 }

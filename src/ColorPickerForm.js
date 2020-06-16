@@ -1,14 +1,31 @@
 import React, {useEffect, useState} from 'react';
+import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import {ChromePicker} from 'react-color';
 import {ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 
+const styles = {
+    colorPicker: {
+        width: "100% !important",
+        marginTop: "2rem"
+    },
+    addColor: {
+        width: '100%',
+        padding: '0.8rem',
+        marginTop: '0.8rem',
+        fontSize: '1rem'
+    },
+    colorNameInput: {
+        width: '100%',
+        height: '60px'
+    }
+};
 
 const ColorPickerForm = (props) => {
     const [currentColor, setCurrentColor] = useState('teal');
     const [colorName, setColorName] = useState("");
-    const {paletteIsFull, handleAddNewColor, paletteColors} = props;
+    const {paletteIsFull, handleAddNewColor, paletteColors, classes} = props;
 
     useEffect(() => {
         ValidatorForm.addValidationRule('isColorNameUnique', value => {
@@ -39,11 +56,15 @@ const ColorPickerForm = (props) => {
 
     return (
         <div>
-            <ChromePicker color={currentColor} onChangeComplete={handleUpdateCurrentColor}/>
+            <ChromePicker color={currentColor} onChangeComplete={handleUpdateCurrentColor} className={classes.colorPicker}/>
             <ValidatorForm onSubmit={handleSubmit}>
                 <TextValidator
                     value={colorName}
                     onChange={handleColorNameChange}
+                    variant={'filled'}
+                    margin={'normal'}
+                    placeholder={'Color Name'}
+                    className={classes.colorNameInput}
                     validators={["required", "isColorNameUnique", "isColorUnique"]}
                     errorMessages={["Enter a color name", "Color name must be unique", "Color already used"]}
                 />
@@ -53,6 +74,7 @@ const ColorPickerForm = (props) => {
                     style={{backgroundColor: paletteIsFull ? 'grey' : currentColor}}
                     type={'submit'}
                     disabled={paletteIsFull}
+                    className={classes.addColor}
                 >
                     {paletteIsFull ? 'Palette Full' : 'Add Color'}
                 </Button>
@@ -61,4 +83,4 @@ const ColorPickerForm = (props) => {
     );
 };
 
-export default ColorPickerForm;
+export default withStyles(styles)(ColorPickerForm);

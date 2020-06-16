@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
         }),
         flexDirection: "row",
         justifyContent: "space-between",
+        alignItems: 'center',
         height: "64px"
     },
     appBarShift: {
@@ -39,14 +40,29 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     },
     navButtons: {
-
+        marginRight: "1rem",
+        '& a': {
+            textDecoration: 'none'
+        }
+    },
+    button: {
+        margin: '0 0.5rem'
     }
 }));
 
 const NewPaletteFormNavbar = (props) => {
     const classes = useStyles();
+    const [showPaletteNameForm, setShowPaletteNameForm] = useState(false);
     const {open, paletteNames, handleDrawerOpen, handleSubmit} = props;
 
+
+    const handleShowPaletteNameForm = () => {
+        setShowPaletteNameForm(true);
+    };
+
+    const handleClosePaletteNameForm = () => {
+        setShowPaletteNameForm(false);
+    };
 
     return (
         <div className={classes.root}>
@@ -73,12 +89,18 @@ const NewPaletteFormNavbar = (props) => {
                     </Typography>
                 </Toolbar>
                 <div className={classes.navButtons}>
-                    <NewPaletteMetaForm paletteNames={paletteNames} handleSubmit={handleSubmit}/>
                     <Link to={'/'}>
-                        <Button variant={'contained'} color={'secondary'}>Go Back</Button>
+                        <Button variant={'contained'} color={'secondary'} className={classes.button}>Go Back</Button>
                     </Link>
+                    <Button variant="contained" color="primary" onClick={handleShowPaletteNameForm} className={classes.button}>Save</Button>
                 </div>
             </AppBar>
+            {showPaletteNameForm && <NewPaletteMetaForm
+                handleClosePaletteNameForm={handleClosePaletteNameForm}
+                showPaletteNameForm={showPaletteNameForm}
+                paletteNames={paletteNames}
+                handleSubmit={handleSubmit}
+            />}
         </div>
     );
 };

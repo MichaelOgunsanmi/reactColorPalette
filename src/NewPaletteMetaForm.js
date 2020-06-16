@@ -6,6 +6,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import {TextValidator, ValidatorForm} from "react-material-ui-form-validator";
+import 'emoji-mart/css/emoji-mart.css'
+import { Picker } from 'emoji-mart'
 
 
 const NewPaletteMetaForm = (props) => {
@@ -50,6 +52,7 @@ const NewPaletteMetaForm = (props) => {
                         Save Palette
                     </Button>
                 </DialogActions>
+                <Picker/>
             </ValidatorForm>
         </Dialog>
     );

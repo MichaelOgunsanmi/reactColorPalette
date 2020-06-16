@@ -9,9 +9,15 @@ import styles from "./styles/PaletteListStyles";
 
 
 const PaletteList = (props) => {
-    const {classes, palettes, history} = props;
+    const {classes, palettes, history, deletePalette} = props;
 
-    const paletteList = palettes.map( palette => <MiniPalette {...palette} handleClick={() => goToPalette(palette.id)}/>);
+    const paletteList = palettes.map( palette => <MiniPalette
+        {...palette}
+        handleDelete={deletePalette}
+        handleClick={() => goToPalette(palette.id)}
+        key={palette.id}
+        id={palette.id}
+    />);
 
     const goToPalette = (paletteId) => {
         history.push(`/palette/${paletteId}`)

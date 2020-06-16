@@ -52,6 +52,10 @@ function App() {
         setPalettes([...palettes, newPalette]);
     };
 
+    const deletePalette = (paletteId) => {
+        setPalettes(palettes.filter(palette => palette.id !== paletteId));
+    };
+
     const syncLocalStorage = () => {
         localStorage.setItem('palettes', JSON.stringify(palettes));
     };
@@ -67,7 +71,7 @@ function App() {
                   {...routeProps}
               />}
           />
-          <Route exact path={'/'} render={(routeProps) => <PaletteList palettes={palettes} {...routeProps}/>}/>
+          <Route exact path={'/'} render={(routeProps) => <PaletteList palettes={palettes} deletePalette={deletePalette} {...routeProps}/>}/>
           <Route exact path={'/palette/:paletteId'} render={(routeProps) => getPalette(routeProps.match.params.paletteId)}/>
           <Route exact path={'/palette/:paletteId/:colorId'} render={(routeProps) =>
               getPalette(routeProps.match.params.paletteId, routeProps.match.params.colorId)}

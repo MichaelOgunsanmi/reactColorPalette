@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {Redirect, Route, Switch} from "react-router-dom";
 
@@ -12,13 +12,14 @@ import {generatePalette} from "./utils/colorHelpers";
 
 
 
-
-
-
-
-
 function App() {
-    const [palettes, setPalettes] = useState(seedPalettes);
+    const savedPalettes = JSON.parse(localStorage.getItem('palettes')) || seedPalettes;
+    const [palettes, setPalettes] = useState(savedPalettes);
+
+    useEffect(() => {
+        syncLocalStorage()
+    }, [palettes]);
+
 
     const getPalette = (paletteId, colorId) => {
         const seedPalette = palettes.find(palette => palette.id.toLowerCase() === paletteId.toLowerCase());
@@ -49,6 +50,10 @@ function App() {
 
     const savePalette = (newPalette) => {
         setPalettes([...palettes, newPalette]);
+    };
+
+    const syncLocalStorage = () => {
+        localStorage.setItem('palettes', JSON.stringify(palettes));
     };
 
 

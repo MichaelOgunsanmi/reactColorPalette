@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -12,43 +11,9 @@ import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
 import NewPaletteMetaForm from "./NewPaletteMetaForm";
 
-const drawerWidth = 400;
+import useStyles from "./styles/NewPaletteFormNavbarStyles";
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex'
-    },
-    appBar: {
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: 'center',
-        height: "64px"
-    },
-    appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    navButtons: {
-        marginRight: "1rem",
-        '& a': {
-            textDecoration: 'none'
-        }
-    },
-    button: {
-        margin: '0 0.5rem'
-    }
-}));
+
 
 const NewPaletteFormNavbar = (props) => {
     const classes = useStyles();

@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/ColorPickerFormStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/DraggableColorBoxStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/NewPaletteFormNavbarStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/NewPaletteFormStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorPickerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorPickerForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DraggableColorBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DraggableColorBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewPaletteForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewPaletteForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewPaletteFormNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewPaletteFormNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/NewPaletteFormNavbarStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/NewPaletteFormNavbarStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/NewPaletteFormStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/NewPaletteFormStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +91,7 @@
       <workItem from="1591225970546" duration="1984000" />
       <workItem from="1591394247332" duration="21034000" />
       <workItem from="1591741764823" duration="65993000" />
-      <workItem from="1592241096032" duration="26350000" />
+      <workItem from="1592241096032" duration="26902000" />
     </task>
     <servers />
   </component>

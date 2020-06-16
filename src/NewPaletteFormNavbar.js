@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
-import {ValidatorForm} from 'react-material-ui-form-validator';
+
 import {Link} from "react-router-dom";
 import NewPaletteMetaForm from "./NewPaletteMetaForm";
 
@@ -97,7 +97,6 @@ const NewPaletteFormNavbar = (props) => {
             </AppBar>
             {showPaletteNameForm && <NewPaletteMetaForm
                 handleClosePaletteNameForm={handleClosePaletteNameForm}
-                showPaletteNameForm={showPaletteNameForm}
                 paletteNames={paletteNames}
                 handleSubmit={handleSubmit}
             />}

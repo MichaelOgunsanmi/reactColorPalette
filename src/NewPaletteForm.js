@@ -103,13 +103,9 @@ const NewPaletteForm = (props) => {
         setPaletteColors(newPaletteColors)
     };
 
-    const handleSavePalette = (paletteName) => {
-
-        const newPalette = {
-            paletteName,
-            id: paletteName.toLowerCase().replace(/ /g, '-'),
-            colors: paletteColors
-        };
+    const handleSavePalette = (newPalette) => {
+        newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, '-');
+        newPalette.colors = paletteColors;
 
         props.savePalette(newPalette);
 
@@ -167,7 +163,7 @@ const NewPaletteForm = (props) => {
                             variant={'contained'}
                             color={'primary'}
                             onClick={handleAddRandomColor}
-                            paletteIsFull={paletteIsFull}
+                            disabled={paletteIsFull}
                         >
                             Random Color
                         </Button>

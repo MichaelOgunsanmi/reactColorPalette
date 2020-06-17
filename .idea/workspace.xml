@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6e32c87d-88a9-4f5f-88ae-6531d74dc2cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaletteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaletteList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/PaletteListStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/PaletteListStyles.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +94,7 @@
       <workItem from="1591394247332" duration="21034000" />
       <workItem from="1591741764823" duration="65993000" />
       <workItem from="1592241096032" duration="26902000" />
-      <workItem from="1592337465455" duration="13576000" />
+      <workItem from="1592337465455" duration="14526000" />
     </task>
     <servers />
   </component>

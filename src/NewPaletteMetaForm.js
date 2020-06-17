@@ -36,6 +36,7 @@ const NewPaletteMetaForm = (props) => {
         };
 
         handleSubmit(newPalette);
+        setSaveStage('');
     };
 
     return (

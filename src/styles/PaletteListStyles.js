@@ -1,12 +1,19 @@
 import sizes from "./mediaBreakPoints";
+import background from './background.svg';
+
 
 const styles = {
     root: {
-        backgroundColor: "blue",
         height: "100vh",
         display: "flex",
         alignItems: "flex-start",
-        justifyContent: "center"
+        justifyContent: "center",
+        backgroundColor: '#3648aa',
+        backgroundImage: `url(${background})`,
+        overflow: 'scroll'
+    },
+    heading: {
+        fontSize: '2rem'
     },
     container: {
         width: "50%",

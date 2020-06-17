@@ -123,6 +123,7 @@ const NewPaletteForm = (props) => {
                     handleRemoveColorBox={handleRemoveColorBox}
                     axis={'xy'}
                     onSortEnd={handleDragAndDrop}
+                    distance={20}
                 />
             </main>
         </div>

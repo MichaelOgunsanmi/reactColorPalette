@@ -70,7 +70,7 @@ function App() {
                                 <NewPaletteForm
                                 savePalette={savePalette}
                                 paletteNames={palettes.map(palette => palette.paletteName)}
-                                starterColors={palettes[0].colors}
+                                starterColors={seedPalettes[0].colors}
                                 allColors={palettes.map(palette => palette.colors).flat()}
                                 {...routeProps} />
                             </Page>}

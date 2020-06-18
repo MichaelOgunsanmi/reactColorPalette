@@ -43,7 +43,7 @@ const ColorPickerForm = (props) => {
     return (
         <div>
             <ChromePicker color={currentColor} onChangeComplete={handleUpdateCurrentColor} className={classes.colorPicker}/>
-            <ValidatorForm onSubmit={handleSubmit}>
+            <ValidatorForm onSubmit={handleSubmit} instantValidate={false}>
                 <TextValidator
                     value={colorName}
                     onChange={handleColorNameChange}

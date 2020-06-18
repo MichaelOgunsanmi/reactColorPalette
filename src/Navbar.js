@@ -7,8 +7,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import {withStyles} from "@material-ui/styles";
 
+import {withStyles} from "@material-ui/styles";
 import "rc-slider/assets/index.css"
 import styles from "./styles/NavabrStyles";
 
@@ -16,14 +16,14 @@ import styles from "./styles/NavabrStyles";
 const Navbar = (props) => {
     const [format, setFormat] = useState("hex");
     const [openSnackbar, setOpenSnackbar] = useState(false);
-    const {classes} = props;
+    const {classes, changeColorFormat, showSlider, level, changeLevel} = props;
 
 
     const handleFormatChange = (event) => {
         const selectedFormat = event.target.value;
         setFormat(selectedFormat);
         setOpenSnackbar(true);
-        props.changeColorFormat(selectedFormat);
+        changeColorFormat(selectedFormat);
     };
 
     const handleCloseSnackbar = () => {setOpenSnackbar(false)};
@@ -34,16 +34,16 @@ const Navbar = (props) => {
             <div className={classes.logo}>
                 <Link to={'/'}>reactcolorpalette</Link>
             </div>
-            {props.showSlider &&
+            {showSlider &&
             <div>
-                <span>Level: {props.level}</span>
+                <span>Level: {level}</span>
                 <div className={classes.slider}>
                     <Slider
-                        defaultValue={props.level}
+                        defaultValue={level}
                         min={100}
                         max={900}
                         step={100}
-                        onAfterChange={props.changeLevel}
+                        onAfterChange={changeLevel}
                     />
                 </div>
             </div>}

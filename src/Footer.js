@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {withStyles} from "@material-ui/styles";
-
 import styles from "./styles/FooterStyles";
 
 const Footer = (props) => {

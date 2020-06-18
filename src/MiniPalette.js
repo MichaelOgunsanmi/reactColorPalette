@@ -1,8 +1,8 @@
 import React, {memo} from 'react';
 
-import {withStyles} from "@material-ui/styles";
 import DeleteIcon from '@material-ui/icons/Delete';
 
+import {withStyles} from "@material-ui/styles";
 import styles from "./styles/MiniPaletteStyles";
 
 

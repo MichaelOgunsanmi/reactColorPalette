@@ -1,24 +1,28 @@
 import React, {useState} from 'react';
+
 import clsx from 'clsx';
+import {arrayMove} from "react-sortable-hoc";
 import Drawer from '@material-ui/core/Drawer';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+
 import DraggableColorList from "./DraggableColorList";
-import {arrayMove} from "react-sortable-hoc";
 import NewPaletteFormNavbar from "./NewPaletteFormNavbar";
 import ColorPickerForm from "./ColorPickerForm";
+
 import useStyles from "./styles/NewPaletteFormStyles";
 
 
 const NewPaletteForm = (props) => {
     const classes = useStyles();
+    const {starterColors, maxColors, savePalette, history, allColors, paletteNames} = props;
     const [open, setOpen] = useState(false);
-    const [paletteColors, setPaletteColors] = useState(props.starterColors);
+    const [paletteColors, setPaletteColors] = useState(starterColors);
 
-    const paletteIsFull = paletteColors.length >= props.maxColors;
+    const paletteIsFull = paletteColors.length >= maxColors;
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -48,9 +52,9 @@ const NewPaletteForm = (props) => {
         newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, '-');
         newPalette.colors = paletteColors;
 
-        props.savePalette(newPalette);
+        savePalette(newPalette);
 
-        props.history.push('/');
+        history.push('/');
     };
 
     const handleClearPaletteColors = () => {
@@ -58,7 +62,7 @@ const NewPaletteForm = (props) => {
     };
 
     const handleAddRandomColor = () => {
-        const randomColor = props.allColors[Math.floor(Math.random() * props.allColors.length)];
+        const randomColor = allColors[Math.floor(Math.random() * allColors.length)];
 
         setPaletteColors([...paletteColors, randomColor]);
     };
@@ -69,7 +73,7 @@ const NewPaletteForm = (props) => {
             <NewPaletteFormNavbar
                 classes={classes}
                 open={open}
-                paletteNames={props.paletteNames}
+                paletteNames={paletteNames}
                 handleSubmit={handleSavePalette}
                 handleDrawerOpen={handleDrawerOpen}
             />

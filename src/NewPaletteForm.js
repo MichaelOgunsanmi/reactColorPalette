@@ -18,7 +18,7 @@ import useStyles from "./styles/NewPaletteFormStyles";
 
 const NewPaletteForm = (props) => {
     const classes = useStyles();
-    const {starterColors, maxColors, savePalette, history, allColors, paletteNames} = props;
+    const {starterColors, maxColors, savePalette, history, paletteNames} = props;
     const [open, setOpen] = useState(false);
     const [paletteColors, setPaletteColors] = useState(starterColors);
 
@@ -62,7 +62,13 @@ const NewPaletteForm = (props) => {
     };
 
     const handleAddRandomColor = () => {
-        const randomColor = allColors[Math.floor(Math.random() * allColors.length)];
+        let isDuplicateColor = true;
+        let randomColor;
+
+        while (isDuplicateColor) {
+            randomColor = starterColors[Math.floor(Math.random() * starterColors.length)];
+            isDuplicateColor = paletteColors.some(color => color.name === randomColor.name);
+        }
 
         setPaletteColors([...paletteColors, randomColor]);
     };

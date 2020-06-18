@@ -15,7 +15,7 @@ import {generatePalette} from "./utils/colorHelpers";
 
 
 function App() {
-    const savedPalettes = JSON.parse(localStorage.getItem('palettes') || seedPalettes);
+    const savedPalettes = JSON.parse((localStorage.getItem('palettes') || JSON.stringify(seedPalettes)));
     const [palettes, setPalettes] = useState(savedPalettes);
 
     useEffect(() => {
@@ -71,7 +71,6 @@ function App() {
                                 savePalette={savePalette}
                                 paletteNames={palettes.map(palette => palette.paletteName)}
                                 starterColors={seedPalettes[0].colors}
-                                allColors={palettes.map(palette => palette.colors).flat()}
                                 {...routeProps} />
                             </Page>}
                         />
@@ -84,6 +83,7 @@ function App() {
                         <Route exact path={'/palette/:paletteId/:colorId'} render={(routeProps) =>
                             getPalette(routeProps.match.params.paletteId, routeProps.match.params.colorId)}
                         />
+                        <Redirect to={'/'}/>
                     </Switch>
                 </CSSTransition>
             </TransitionGroup>

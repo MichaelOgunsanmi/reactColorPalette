@@ -15,11 +15,11 @@ import {generatePalette} from "./utils/colorHelpers";
 
 
 function App() {
-    const savedPalettes = JSON.parse(localStorage.getItem('palettes')) || seedPalettes;
+    const savedPalettes = JSON.parse(localStorage.getItem('palettes') || seedPalettes);
     const [palettes, setPalettes] = useState(savedPalettes);
 
     useEffect(() => {
-      localStorage.setItem('palettes', JSON.stringify(palettes));
+        localStorage.setItem('palettes', JSON.stringify(palettes));
     }, [palettes]);
 
 

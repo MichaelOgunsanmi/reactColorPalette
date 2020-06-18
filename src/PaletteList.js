@@ -36,20 +36,20 @@ const PaletteList = (props) => {
         setDeletingId(id);
     };
 
+    const goToPalette = (paletteId) => {
+        history.push(`/palette/${paletteId}`)
+    };
+
     const paletteList = palettes.map( palette =>
         <CSSTransition timeout={500} classNames={'fade'} key={palette.id}>
             <MiniPalette
             {...palette}
             openDialog={handleOpenDialog}
-            handleClick={() => goToPalette(palette.id)}
+            goToPalette={goToPalette}
             id={palette.id}
             />
         </CSSTransition>
     );
-
-    const goToPalette = (paletteId) => {
-        history.push(`/palette/${paletteId}`)
-    };
 
     const handlePaletteDelete = () => {
         deletePalette(deletingId);

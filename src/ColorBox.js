@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classNames from 'classnames';
 
 import {Link} from "react-router-dom";
 import {CopyToClipboard} from "react-copy-to-clipboard";
@@ -10,7 +11,7 @@ import styles from "./styles/ColorBoxStyles";
 class ColorBox extends Component {
     state = { copied: false};
 
-    changeCopyState = () => {
+        changeCopyState = () => {
         this.setState({copied: true}, () => {
             setTimeout( () => {
                 this.setState({copied: false})
@@ -26,8 +27,8 @@ class ColorBox extends Component {
         return (
             <CopyToClipboard text={backgroundColor} onCopy={this.changeCopyState}>
                 <div className={classes.ColorBox} style={{backgroundColor}}>
-                    <div className={`${classes.copyOverlay} ${copied && classes.showOverlay}`} style={{backgroundColor}}/>
-                    <div className={`${classes.copyMessage} ${copied && classes.showMessage}`}>
+                    <div className={classNames(classes.copyOverlay, {[classes.showOverlay]: copied})} style={{backgroundColor}}/>
+                    <div className={classNames(classes.copyMessage, {[classes.showMessage]: copied})}>
                         <h1>copied!</h1>
                         <p className={classes.copyText}>{backgroundColor}</p>
                     </div>
